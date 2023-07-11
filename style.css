@@ -39,8 +39,32 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 56px;
+  margin-top: 42px; /* 56px */
   width: 40%;
+}
+
+@keyframes switch {
+  0% {
+    right: 50%;
+  }
+  1% {
+    right: 50%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes switchLight {
+  0% {
+    left: 50%;
+  }
+  1% {
+    left: 50%;
+  }
+  100% {
+    right: 0;
+  }
 }
 
 .profile {
@@ -61,6 +85,7 @@ main {
 
 .switch {
   position: relative;
+  padding: 8px;
 }
 
 .switch button {
@@ -71,14 +96,33 @@ main {
   border: 0;
 
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 50%;
+  left: 0;
   transform: translateY(-50%);
+  animation: switchLight 0.3s;
+}
+
+.switch button:hover {
+  box-shadow: 0 0 0 8px var(--highlight-color);
+  transition: ease-in-out 0.1s;
 }
 
 .light .switch button {
   right: 0;
+  left: inherit;
+  animation: switch 0.3s;
 }
+
+/* .switch div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+} */
 
 .switch span {
   display: block;
