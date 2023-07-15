@@ -33,6 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
 main {
@@ -215,8 +216,18 @@ main {
   text-decoration: underline;
 }
 
-@media (max-width: 630px) {
+@media (max-width: 740px) {
   main {
     width: auto;
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/img/bg-mobile.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/img/bg-mobile-light.jpg);
   }
 }
