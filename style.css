@@ -10,7 +10,7 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/img/bg-desktop.png);
+  --bg-url: url(./assets/img/bg-desktop.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
@@ -222,7 +222,7 @@ main {
   }
 }
 
-@media (min-width: 700px) {
+@media (max-width: 700px) {
   :root {
     --bg-url: url(./assets/img/bg-mobile.jpg);
   }
