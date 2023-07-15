@@ -223,17 +223,23 @@ main {
 }
 
 @media (min-width: 700px) {
-  :root {
+  /* :root {
     --bg-url: url(./assets/img/bg-desktop.jpg);
   }
 
   .light {
     --bg-url: url(./assets/img/bg-desktop-light.jpg);
-  }
+  } */
 }
 
 @media (min-width: 0px) {
   body {
     height: 100%;
+  }
+}
+
+@media (min-height: 0px) {
+  body {
+    height: 100vh;
   }
 }
